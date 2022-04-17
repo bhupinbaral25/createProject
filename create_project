@@ -68,16 +68,13 @@ plugins:
 resources:
 functions:
 "> serverless.yml
-printf "This project creates the project structure for backend for python in serverless
-go to ```serverless.yml```and change the profile name and all configuration for deployement of the API's
-npm and the plugins are already installed inside directory you are just one step behid from 
-```bash
-sls deploy --verbose --stage dev``` 
-
-Also a git is initialize in this project directory add your remote repository. Already there exist a main,test and dev branch 
-you need to make your own branch for further progress . 
-THANK YOU  
-MISS ME  
+printf "This project creates the project structure for backend in python for serverless
+go to serverless.yml and change the profile name and all configuration for deployement of the API's
+npm and the plugins are already installed inside directory you are just one step behid from deployment
+Also a git is initialize in this project directory add your remote repository. Already there exist a main,test and dev branch
+you need to make your own branch for further progress .
+THANK YOU
+MISS ME
 AUTHOR: BHUPIN BARAL ">README.md
 
 echo "initializing git setup and branching"
