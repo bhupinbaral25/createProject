@@ -1,9 +1,9 @@
-##About 
+#About 
 
 This project contain a file where you can create your own command to create a project directory for serverless 
 After addeding few commands you are able to create a project directory for serverless just by using ```create_project```
 
-##Follow These things 
+#Follow These things 
 ```bash 
 git clone https://github.com/bhupinbaral25/createProject.git
 sudo mv create_project /bin
@@ -20,10 +20,12 @@ create_project
 ```
 ##Magic Begains
 
-##Author
+#Author
+
 Bhupin Baral
 
-##Contributions
+#Contributions
+
 fork the project and create a new pull request
 
 
