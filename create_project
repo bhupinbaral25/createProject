@@ -1,0 +1,85 @@
+echo "Creating project directory"
+
+echo "initializing git in this repository"
+git init
+
+#writing inside gitignore file
+ 
+printf ".serverless
+venv/**
+.env.*
+yarn.lock
+package-lock.json
+node_modules" >.gitignore
+
+touch README.md
+
+echo "Creating directories"
+mkdir models utils
+mkdir -p validators/models
+mkdir -p layers/tools
+mkdir -p functions/example
+touch functions/example/index.yml
+
+echo "Creating virtualenvirnment and activated it"
+python3 -m virtualenv venv 
+source venv/bin/activate
+touch requirements.txt
+
+echo "Setting up serverless"
+touch serverless.yml
+printf "useDotenv: true
+service: (your service name)
+frameworkVersion: '2'
+
+custom:
+  
+provider:
+  name: aws
+  runtime: python3.8
+  lambdaHashingVersion: 20201221
+  stage: ${opt:stage, 'dev'}
+  profile: (profile_name)
+  region: ap-south-1
+  logRetentionInDays: 10
+  deploymentBucket:
+    blockPublicAccess: true
+    maxPreviousDeploymentArtifacts: 5
+    name: ${env:DEPLOYMENT_BUCKET}
+  stackTags:
+    developer1: 
+    developer2: 
+
+  tags:
+    developer1: 
+    developer2: 
+
+  environment:
+    
+package:
+  patterns:
+   #-put all the file name  you want to ignore "!venv"
+  individually: true
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-iam-roles-per-function
+resources:
+functions:
+"> serverless.yml
+echo "initializing git setup and branching"
+git add .
+git commit -m "Inital commit and intial setup of the project"
+git branch -M main
+git checkout -b test
+git checkout -b dev
+
+echo "installing node and plugins mentioned in serverless" 
+npm install 
+npm i serverless-dotenv-plugin serverless-iam-roles-per-function
+
+echo "All setup complete!"
+echo "cool"
+echo "All the best for your project"
+echo "bye!"
+code .
