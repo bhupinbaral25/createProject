@@ -5,7 +5,7 @@ After addeding few commands you are able to create a project directory for serve
 
 ##Follow These things 
 ```bash 
-git clone
+git clone https://github.com/bhupinbaral25/createProject.git
 sudo mv create_project /bin
 sudo chmod +x /bin/create_project
 ```
