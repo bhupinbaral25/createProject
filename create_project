@@ -13,6 +13,7 @@ package-lock.json
 node_modules" >.gitignore
 
 touch README.md
+touch serverless.yml
 
 echo "Creating directories"
 mkdir models utils
@@ -27,7 +28,7 @@ source venv/bin/activate
 touch requirements.txt
 
 echo "Setting up serverless"
-touch serverless.yml
+
 printf "useDotenv: true
 service: (your service name)
 frameworkVersion: '2'
