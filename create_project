@@ -23,7 +23,8 @@ mkdir -p functions/example
 touch functions/example/index.yml
 
 echo "Creating virtualenvirnment and activated it"
-python3 -m virtualenv venv 
+python3 -m pip install --user virtualenv
+python3 -m virtualenv venv
 source venv/bin/activate
 touch requirements.txt
 
@@ -31,7 +32,7 @@ echo "Setting up serverless"
 
 printf "useDotenv: true
 service: (your service name)
-frameworkVersion: '2'
+frameworkVersion: '3'
 
 custom:
   
@@ -59,7 +60,7 @@ provider:
     
 package:
   patterns:
-   #-put all the file name  you want to ignore "!venv"
+   #-put all the file name  you want to ignore like --> "!venv"
   individually: true
 
 plugins:
